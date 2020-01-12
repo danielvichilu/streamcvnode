@@ -1,11 +1,5 @@
-//const express = require('express');
+
 const cv = require ('opencv4nodejs');
-//const app = express();
-//let server;
-//let port;
- // const http = require('http');
- // server = http.createServer(app);
- // port = process.env.PORT || 5000;
   //video capture from raspberry2
 wCap = new cv.VideoCapture(0);
 wCap.set(cv.CAP_PROP_FRAME_WIDTH, 300);
@@ -27,5 +21,5 @@ setInterval(()=>{
   const imageFormated=image.toString('base64')
   socket2.emit('image2', imageFormated); // send binary data to raspberry1 server
   }, 140)
-//server.listen(port, () => console.log(`http://localhost:${port}`))
+
                           
